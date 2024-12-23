@@ -10,6 +10,9 @@ spring:
     hibernate:
       ddl-auto: update
     show-sql: true
+  data:
+    rest:
+      base-path: /seller
 jwt:
   signatureAlgorithm: HFIDWHFJJfhewbfjk24141535fdg2erhukwebrkq3uqhfbqkbdfkw
 server:

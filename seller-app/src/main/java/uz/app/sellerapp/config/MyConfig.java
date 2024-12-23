@@ -16,6 +16,7 @@ public class MyConfig {
                     authent
                             .requestMatchers("/seller/**","/seller/swagger/**","/seller/swagger-ui/**","/v3/**")
                             .permitAll()
+                            .requestMatchers("/seller/")
                             .anyRequest()
                             .authenticated();
                 })
