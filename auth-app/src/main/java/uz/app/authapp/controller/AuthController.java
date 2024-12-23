@@ -4,10 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.password.PasswordEncoder;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import uz.app.authapp.entity.User;
 import uz.app.authapp.entity.enums.Role;
 import uz.app.authapp.exceptions.DublicateUserException;
@@ -33,6 +30,10 @@ public class AuthController {
         this.jwtProvider = jwtProvider;
     }
 
+    @GetMapping
+    public ResponseEntity<?> getAllUsers() {
+        return ResponseEntity.ok("auth app is available");
+    }
 
     @PostMapping("/signUp")
     public ResponseEntity<?> signUp(@RequestBody UserDTO userDTO) {
