@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: auth-app
+  datasource:
+    username: market_user
+    password: P9uCRdqdXcrEG6c2gQXdsPoVk5Kydcgc
+    url: jdbc:postgresql://dpg-ctkk2vggph6c739e39qg-a.oregon-postgres.render.com/market_db_ylv4
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+jwt:
+  signatureAlgorithm: HFIDWHFJJfhewbfjk24141535fdg2erhukwebrkq3uqhfbqkbdfkw
+server:
+  port: 8081
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
