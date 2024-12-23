@@ -21,6 +21,11 @@ public class GatewayAppApplication {
                                 .path("/auth/**")
                                 .uri("lb://auth-app")
                 )
+                .route((path) ->
+                        path
+                                .path("/seller/**")
+                                .uri("lb://seller-app")
+                )
                 .build();
     }
 

@@ -47,7 +47,7 @@ public class MyConfig {
                 .csrf(c -> c.disable())
                 .cors(c -> corsConfigurationSource())
                 .authorizeHttpRequests(req -> {
-                    req.requestMatchers("/auth/**","/swagger-ui/**","/v3/**")
+                    req.requestMatchers("/auth/**","/auth/swagger","/auth/swagger-ui/**","/v3/**")
 
                             .permitAll()
                             .anyRequest()
