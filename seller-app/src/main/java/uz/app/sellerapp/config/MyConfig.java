@@ -2,6 +2,7 @@ package uz.app.sellerapp.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.http.HttpMethod;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.web.SecurityFilterChain;
@@ -16,7 +17,8 @@ public class MyConfig {
                     authent
                             .requestMatchers("/seller/**","/seller/swagger/**","/seller/swagger-ui/**","/v3/**")
                             .permitAll()
-                            .requestMatchers("/seller/")
+                            .requestMatchers(HttpMethod.POST ,"/seller/**")
+                            .hasRole("SELLER")
                             .anyRequest()
                             .authenticated();
                 })

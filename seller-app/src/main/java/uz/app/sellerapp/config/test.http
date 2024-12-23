@@ -5,3 +5,10 @@ Content-Type: application/json
   "username": "abror",
   "password": "root123"
 }
+###
+GET localhost:8080/seller/product
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE3MzQ5NTk1NjQsInN1YiI6ImFicm9yIiwiZXhwIjoxNzM1MDQ1NTY0fQ.C3qekNCuABxSkXW7cTZiXGX4yLtiwtSJLTN-fZPeHD0
+
+###
+POST localhost:8080/seller/product
+Authorization: Bearer <access_token>
